@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteRule ^index.html$ index.php
+RewriteRule ^index.htm$ index.php
+ErrorDocument 404 /404.html
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+
+
+
+
+
